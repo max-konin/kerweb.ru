@@ -1,0 +1,100 @@
+body {
+	font-family: Sans, Arial;
+}
+
+.black {
+	background: #000 !important;
+}
+
+header > div {
+	position: absolute;
+	padding: 0 11px;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 1000px;
+	margin: 0 auto;
+	> div:first-child {
+		height: 100px;
+		border-bottom: solid 1px #fff;
+		> div:first-child {
+			float: left;
+			padding-top: 30px;
+			padding-bottom: 0px;
+		}
+		> div:last-child {
+			float: right;
+			text-align: right;
+		}
+		> div {
+			padding: 20px 20px;
+			h1 {
+				padding-left: 35px;
+				font-weight: normal;
+				color: #fbf1c0;
+			}
+			p {
+				color: #fbf1c0;
+			}
+			p, a {
+				margin: 0;
+				cursor: default;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			a {
+				cursor: auto;
+				color: #999;
+			}
+			a:hover {
+				color: #fff;
+			}
+		}
+	}
+	> div:last-child {
+		margin: 0 20px;
+		height: 30px;
+	}
+}
+
+footer > div {
+	position: absolute;
+	padding: 0 11px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 1000px;
+	margin: 0 auto;
+	color: #fbf1c0;
+	> div {
+		height: 53px;
+		> div:first-child {
+			float: left;
+			font-size: 12px;
+			font-weight: bold;
+			p {
+				margin: 16px 10px;
+			}
+		}
+		> div:last-child {
+			float: right;
+		}
+	}
+}
+
+.navbar {
+	.nav {
+		margin: 0;
+		> li a {
+			padding: 5px 11px 5px;
+		}
+	}
+}
+
+#body {
+	width: 1000px;
+	padding: 0 10px;
+	div#info {
+		
+	}
+}
