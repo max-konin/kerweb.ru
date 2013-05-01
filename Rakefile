@@ -4,8 +4,5 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-require "net/ssh"
-require "net/sftp"
-
 Kerweb::Application.load_tasks
 
