@@ -1,4 +1,6 @@
 Kerweb::Application.routes.draw do
+  devise_for :users
+
   root :to => 'Home#index'
   get "home/index"
 
