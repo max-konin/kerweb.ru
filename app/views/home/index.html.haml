@@ -10,10 +10,12 @@
 		%p
 			Мы верим в то, что залог успеха сайта заключен в функциональности и удобстве для пользователя внутри и привлекательном дизайне снаружи. Для достижения этих целей у нас есть все необходимые ресурсы, которые мы будем рады предоставить заказчику.
 	%div.topProjects
+		%div.project
+			%div.ja-sidenews{:style => "width: 241px; height: 240px; display: block; margin: 0 auto;"}
+				%div.ja-slidenews-cover{:style => "left: 0px;"}
+					%img{:src => "images/mail-big.png", :alt => "Контакты", :title => "Контакты", width="241" height="240"}
+				%div.ja-sidenews-display
+					%div.ja-sidenews-desc{ :style => "color: #fff;"}
 		%div
 			%div.project
-				
-		%div
-			%div.project
-				
 = render 'footer'
