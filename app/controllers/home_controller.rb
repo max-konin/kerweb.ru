@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
-  def index
-  end
+	def index
+		@title = 'Kernel Web Studio'
+	end
 end
