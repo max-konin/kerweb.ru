@@ -95,9 +95,19 @@ footer {
 	padding: 0 10px;
 	margin: 0 auto;
 	padding-bottom: 60px;
+	position: absolute;
+	top: 130px;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	> div {
-		display: inline-block;
-		vertical-align: top;
+		width: 1000px;
+		display: table-cell;
+		vertical-align: middle;
+		> div {
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 	.info {
 		border: 2px solid #dad8cb;
@@ -108,7 +118,6 @@ footer {
 		width: 470px;
 	}
 	.topProjects {
-		height: 410px;
 		padding: 0px 0 0 0px;
 		margin: 30px 0 0 40px;
 		> div {
@@ -119,6 +128,24 @@ footer {
 			&:first-child {
 				margin-bottom: 20px;
 			}
+		}
+	}
+	.project {
+		position: relative;
+		height: 180px;
+		width: 180px;
+		overflow: hidden;
+		.slide-cover {
+			height: 180px;
+			background-color: #f0f;
+		}
+		.slide-desc {
+			height: 180px;
+			width: 180px;
+			position: absolute;
+			z-index: 5;
+			top: 160px;
+			background-color: #ff0;
 		}
 	}
 }
