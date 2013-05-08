@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  id: 1
   name: MyString
-  href: MyString
+  pic: MyString
+  desc: MyText
   body: MyText
+  href: MyString
   top: false
 
 two:
-  id: 1
   name: MyString
-  href: MyString
+  pic: MyString
+  desc: MyText
   body: MyText
+  href: MyString
   top: false

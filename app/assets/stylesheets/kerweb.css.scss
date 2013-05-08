@@ -137,15 +137,30 @@ footer {
 		overflow: hidden;
 		.slide-cover {
 			height: 180px;
-			background-color: #f0f;
+			background-color: #aaa;
 		}
 		.slide-desc {
 			height: 180px;
 			width: 180px;
 			position: absolute;
 			z-index: 5;
-			top: 160px;
-			background-color: #ff0;
+			top: 145px;
+			padding: 0 10px;
+			background-color: #141315;
+			color: #f4f6f3;
+			a {
+				color: #f4f6f3;
+				margin: 0;
+				cursor: pointer;
+				display: inline-block;
+				&:hover {
+					color: #a4a6f3;
+				}
+			}
+			h3 {
+				font-size: 15px;
+				margin: 0;
+			}
 		}
 	}
 }
