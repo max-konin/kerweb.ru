@@ -12,9 +12,10 @@
 				Мы верим в то, что залог успеха сайта заключен в функциональности и удобстве для пользователя внутри и привлекательном дизайне снаружи. Для достижения этих целей у нас есть все необходимые ресурсы, которые мы будем рады предоставить заказчику.
 		%div.topProjects
 			- @projects.each do |project|
-				= render 'projects/slideview?project'
+				= render 'projects/slideview' :locals => {project: project}
 				%div.project
 					%div.slide-desc
+						%h3= @project.name
 						%p= @project.desc
 					%div.slide-cover
 						%img{:src => @project.pic}
