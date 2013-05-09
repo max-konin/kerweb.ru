@@ -1,0 +1,5 @@
+%div#showProject
+	%h3= @project.name
+	%a.btn{:href => "#{@project.href}"}= @project.href
+	%div.border
+	%p= @project.body

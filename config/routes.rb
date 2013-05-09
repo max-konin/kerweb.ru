@@ -1,10 +1,13 @@
 Kerweb::Application.routes.draw do
+  resources :projects
+
+
   devise_for :users
 
   root :to => 'Home#index'
   get "home/index"
 
-  resources :projects
+  match "/portfolio" => 'Home#portfolio'
 
 
   # The priority is based upon order of creation:
