@@ -1,24 +1,5 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @project.name
-%p
-  %b Pic:
-  = @project.pic
-%p
-  %b Desc:
-  = @project.desc
-%p
-  %b Body:
-  = @project.body
-%p
-  %b Href:
-  = @project.href
-%p
-  %b Top:
-  = @project.top
-
-= link_to 'Edit', edit_project_path(@project)
-\|
-= link_to 'Back', projects_path
+%div#showProject
+	%h3= @project.name
+	%a.btn{:href => "#{@project.href}"}= @project.href
+	%div.border
+	%p= @project.body

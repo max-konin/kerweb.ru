@@ -2,7 +2,14 @@
 %html
 	= render 'home/head'
 %body
-	= render 'home/header'
-	%div#body
-		= yield
-	= render 'home/footer'
+	%table{:align => "center", :cellspacing => "0", :cellpadding => "0", :border => "0"}
+		%tr 
+			%td
+				= render 'home/header'
+		%tr
+			%td
+				%div#body
+					= yield
+		%tr
+			%td
+				= render 'home/footer'

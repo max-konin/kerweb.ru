@@ -2,7 +2,7 @@ html, body {
 	position: relative;
 	font-family: Sans, Arial;
 	height: 100%;
-	min-height: 750px;
+	min-height: 640px;
 }
 
 .black {
@@ -57,11 +57,7 @@ header {
 }
 
 footer {
-	position: absolute;
 	padding: 0 11px;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	width: 1000px;
 	margin: 0 auto;
 	color: #fbf1c0;
@@ -90,20 +86,25 @@ footer {
 	}
 }
 
+table {
+	height: 100%;
+	tr {
+		&:first-child {
+			height: 130px;
+		}
+		&:last-child {
+			height: 50px;
+		}
+	}
+}
+
 #body {
 	width: 1000px;
-	padding: 0 10px;
+	padding: 0 10px 20px;
 	margin: 0 auto;
-	padding-bottom: 60px;
-	position: absolute;
-	display: inline-block;
-	top: 130px;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	display: block;
 	> div {
 		width: 1000px;
-		display: table-cell;
 		vertical-align: middle;
 		> div {
 			display: inline-block;
@@ -136,7 +137,7 @@ footer {
 		width: 710px;
 		height: auto;
 		padding: 45px;
-		margin: 25px auto 75px;
+		margin: 25px auto 0px;
 		.project {
 			display: inline-block;
 			margin-right: 80px;
@@ -147,6 +148,25 @@ footer {
 			&:nth-child(3n+3) {
 				margin-right: 0;
 			}
+		}
+	}
+	#showProject {
+		display: block;
+		width: 900px;
+		margin: 0 auto;
+		h3 {
+			font-size: 23px;
+			margin: 0;
+		}
+		p {
+			
+		}
+		div.border {
+			display: block;
+			height: 1px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #a2a2a2;
 		}
 	}
 	.project {
