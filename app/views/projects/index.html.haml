@@ -1,29 +1,3 @@
-%h1 Listing projects
-
-%table
-  %tr
-    %th Name
-    %th Pic
-    %th Desc
-    %th Body
-    %th Href
-    %th Top
-    %th
-    %th
-    %th
-
-  - @projects.each do |project|
-    %tr
-      %td= project.name
-      %td= project.pic
-      %td= project.desc
-      %td= project.body
-      %td= project.href
-      %td= project.top
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-= if user_signed_in?
-  = link_to 'New Project', new_project_path
+%div#portfolio
+	- @projects.each do |project|
+		= render "projects/slideview", :project => project

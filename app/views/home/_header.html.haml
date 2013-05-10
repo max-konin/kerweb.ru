@@ -1,15 +1,16 @@
 %header
 	%div.black
 		%div
-			%h1 Kernel Web Studio
+			%h1 
+				= link_to 'Kernel Web Studio', '/'
 		%div
 			%p Контакты:
-			= link_to 'info[at]kerweb.ru', 'javascript:mail(this)'
+			= link_to 'info[at]kerweb.ru', '#'
 			%p 
 				skype: 
 				= link_to 'maxmaxmax697', 'skype:maxmaxmax697?chat'
 	%div.navbar.navbar-inverse.black
 		%ul.nav
-			%li= link_to 'Home', '#'
-			%li= link_to 'Portfolio', '#'
-			%li= link_to 'Contact', '#'
+			%li= link_to 'Home', '/'
+			%li= link_to 'Portfolio', '/projects'
+			%li= link_to 'Contacts', '/contacts'

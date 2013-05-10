@@ -10,4 +10,6 @@
 			Мы верим в то, что залог успеха сайта заключен в функциональности и удобстве для пользователя внутри и привлекательном дизайне снаружи. Для достижения этих целей у нас есть все необходимые ресурсы, которые мы будем рады предоставить заказчику.
 	%div.topProjects
 		- @projects.each do |project|
-			= render "projects/slideview", :project => project
+			= render 'projects/slideview', :project => project
+	%div#anotherProjects
+		%p.img-rounded Другие проекты
