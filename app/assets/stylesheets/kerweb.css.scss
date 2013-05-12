@@ -66,6 +66,10 @@ footer {
 	width: 1000px;
 	margin: 0 auto;
 	color: #fbf1c0;
+//	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	> div {
 		height: 53px;
 		> div:first-child {
@@ -98,7 +102,7 @@ table {
 			height: 130px;
 		}
 		&:last-child {
-			height: 50px;
+			height: 53px;
 		}
 	}
 }
@@ -126,6 +130,7 @@ table {
 	.topProjects {
 		padding: 0px 50px 0 50px;
 		margin: 0px auto 60px;
+		height: 180px;
 		display: block;
 		> div {
 			width: 180px;
@@ -138,14 +143,20 @@ table {
 	}
 	#anotherProjects {
 		display: block;
-		p {
+		a {
 			font-size: 18px;
 			padding: 5px;
 			margin: 0 auto;
 			background-color: #000;
 			color: #fff;
 			text-align: center;
+			text-decoration: none;
 			width: 160px;
+			display: block;
+			&:hover {
+				text-decoration: none;
+				color: #f0f3f5;
+			}
 		}
 	}
 	#portfolio {
@@ -190,6 +201,8 @@ table {
 		height: 180px;
 		width: 180px;
 		overflow: hidden;
+//		display: inline-block;
+		float: left;
 		.slide-cover {
 			height: 180px;
 			background-color: #aaa;

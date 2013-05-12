@@ -12,4 +12,4 @@
 		- @projects.each do |project|
 			= render 'projects/slideview', :project => project
 	%div#anotherProjects
-		%p.img-rounded Другие проекты
+		%a.img-rounded{:href => "projects/"} Другие проекты
