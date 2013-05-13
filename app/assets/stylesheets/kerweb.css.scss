@@ -27,10 +27,15 @@ header {
 		}
 		> div {
 			padding: 20px 20px;
-			h1 {
+			h1 a {
 				padding-left: 35px;
 				font-weight: normal;
 				color: #fbf1c0;
+				font-size: 38.5px;
+				line-height: 40px;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 			p {
 				color: #fbf1c0;
@@ -57,14 +62,14 @@ header {
 }
 
 footer {
-	position: absolute;
 	padding: 0 11px;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	width: 1000px;
 	margin: 0 auto;
 	color: #fbf1c0;
+//	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	> div {
 		height: 53px;
 		> div:first-child {
@@ -90,19 +95,25 @@ footer {
 	}
 }
 
+table {
+	height: 100%;
+	tr {
+		&:first-child {
+			height: 130px;
+		}
+		&:last-child {
+			height: 53px;
+		}
+	}
+}
+
 #body {
 	width: 1000px;
-	padding: 0 10px;
+	padding: 0 10px 20px;
 	margin: 0 auto;
-	padding-bottom: 60px;
-	position: absolute;
-	top: 130px;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	display: block;
 	> div {
 		width: 1000px;
-		display: table-cell;
 		vertical-align: middle;
 		> div {
 			display: inline-block;
@@ -110,24 +121,79 @@ footer {
 		}
 	}
 	.info {
-		border: 2px solid #dad8cb;
-		background-color: #fce8e8;
 		font-size: 15px;
 		padding: 20px;
-		margin: 30px 0 0 155px;
-		width: 470px;
+		margin: 20px auto;
+		width: 800px;
+		display: block;
 	}
 	.topProjects {
-		padding: 0px 0 0 0px;
-		margin: 30px 0 0 40px;
+		padding: 0px 50px 0 50px;
+		margin: 0px auto 60px;
+		height: 180px;
+		display: block;
 		> div {
-			display: block;
 			width: 180px;
 			height: 180px;
 			background-color: #000;
-			&:first-child {
-				margin-bottom: 20px;
+			&:nth-last-child(n+1) {
+				margin-right: 50px;
 			}
+		}
+	}
+	#anotherProjects {
+		display: block;
+		a {
+			font-size: 18px;
+			padding: 5px;
+			margin: 0 auto;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+			width: 160px;
+			display: block;
+			&:hover {
+				text-decoration: none;
+				color: #f0f3f5;
+			}
+		}
+	}
+	#portfolio {
+		display: block;
+		width: 710px;
+		height: auto;
+		padding: 45px;
+		margin: 25px auto 0px;
+		.project {
+			display: inline-block;
+			margin-right: 80px;
+			margin-bottom: 75px;
+			&:nth-last-child(-n+3) {
+				margin-bottom: 0;
+			}
+			&:nth-child(3n+3) {
+				margin-right: 0;
+			}
+		}
+	}
+	#showProject {
+		display: block;
+		width: 900px;
+		margin: 0 auto;
+		h3 {
+			font-size: 23px;
+			margin: 0;
+		}
+		p {
+			
+		}
+		div.border {
+			display: block;
+			height: 1px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #a2a2a2;
 		}
 	}
 	.project {
@@ -135,6 +201,8 @@ footer {
 		height: 180px;
 		width: 180px;
 		overflow: hidden;
+//		display: inline-block;
+		float: left;
 		.slide-cover {
 			height: 180px;
 			background-color: #aaa;
@@ -162,5 +230,35 @@ footer {
 				margin: 0;
 			}
 		}
+	}
+}
+
+#gallery {
+	list-style: none;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	li {
+		margin: 0 auto;
+		padding-bottom: 10px;
+		height: 100px;
+		float: left;
+		width: 25%;
+	}
+}
+
+.pagination {
+	display: block;
+	width: 100%;
+	padding: 0 5px;
+	.next, .prev {
+		padding: 0 5px;
+		background-color: #141618;
+	}
+	.next {
+		float: right;
+	}
+	.prev {
+		float: left;
 	}
 }
