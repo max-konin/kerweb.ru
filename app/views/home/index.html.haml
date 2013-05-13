@@ -1,15 +1,180 @@
-%div
-	%div.info
-		%p 
-			Kernel Web Studio - это молодая команда профессионалов, занимающаяся разработкой сайтов любой сложности и функционала "под ключ".
-		%p
-			Мы являемся веб-студией полного цикла, а значит, вы можете целиком доверить нам вашу идею. Мы имеем опыт по разработке на php, ruby on rails, ASP .NET и Java EE, создание сайтов-визиток, информационных порталов, интеренет-магазинов.
-		%p
-			Все проекты в нашем портфолио живые и функционирующие.
-		%p
-			Мы верим в то, что залог успеха сайта заключен в функциональности и удобстве для пользователя внутри и привлекательном дизайне снаружи. Для достижения этих целей у нас есть все необходимые ресурсы, которые мы будем рады предоставить заказчику.
-	%div.topProjects
-		- @projects.each do |project|
-			= render 'projects/slideview', :project => project
-	%div#anotherProjects
-		%a.img-rounded{:href => "projects/"} Другие проекты
+/ HEADER HOME ###############################################
+%section#home
+  .row
+    .twelve.columns
+      %h1.fade-it
+        %img{:alt => "YOURLOGO", :src => "/assets/logo_header.png"}
+      .fade-it
+        .roles
+          %div{:style => "margin-top: 0px;"}
+            We are Killers 
+          %div
+            We are Bandits
+          %div
+            We are Bad Guys
+          %div
+            We are Raiders
+          %div
+            We are what you need.
+    / LITTLE LOGO SEE WHAT WE DO
+    #down_button.fade-it
+      %a{:href => "#whatwedo"}
+    / END LITTLE LOGO SEE WHAT WE DO
+/ END HEADER HOME ###############################################
+/ NAVIGATION ###############################################
+.nav-container{:style => "height: auto;"}
+  %nav{:style => "top: 0px;"}
+    #logo
+      %a{:href => "#"}
+        %img{:alt => "YOURLOGO", :src => "/assets/logo_small.png"}
+    %ul
+      %li
+        %a{:href => "#home"}
+          Home
+      %li
+        %a{:href => "#whatwedo"}
+          What we do
+      %li
+        %a{:href => "#contact"}
+          Contact
+    %select
+      %option{:selected => "selected", :value => ""}
+      %option{:value => "#"}
+      %option{:value => "#home"}
+        Home
+      %option{:value => "#whatwedo"}
+        What we do
+      %option{:value => "#contact"}
+        Contact
+/ END NAVIGATION ###############################################
+/ WHAT WE DO SECTION ###############################################
+%section#whatwedo
+  .row
+    .twelve.columns.centered
+      %h2
+        What we do.
+        %i.title_line
+  .row
+    .eleven.columns.centered
+      %p.subtittle
+        See also great stuff on
+        %a{:href => "#"}
+          Behance
+        \.
+  .row
+    / WORKS GRID
+    %ul#og-grid.og-grid
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/2big.png", "data-title" => "Name Of Project", :href => "http://www.google.be/"}
+          %img{:alt => "img01", :src => "/assets/1.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/1big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/2.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/3big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/3.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/4big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/4.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/6big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/5.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/7big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/6.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/7big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/7.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/8big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/8.jpg"}
+      %li
+        %a{"data-description" => "Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.", "data-largesrc" => "assets/9big.png", "data-title" => "Name Of Project", :href => "#"}
+          %img{:alt => "img01", :src => "/assets/9.jpg"}
+    / END WORKS GRID
+/ END WHAT WE DO SECTION ###############################################
+/ CONTACT SECTION ###############################################
+%section#contact
+  .row
+    .twelve.columns.centered
+      %h2
+        Contact.
+        %i.title_line
+  .row
+    .eleven.columns.centered
+      %p.subtittle
+        We're currently accepting new client projects.
+        %br/
+        Think we might help? We'd love to hear from you.
+  .row
+    .seven.columns
+      %form{:action => "http://martin.kooka.be/wp/halfcreative/form_sender.php", :method => "post", :name => "htmlform"}
+        %input{:name => "first_name", :placeholder => "YOUR LOVELY NAME", :required => "", :type => "text"}/
+        %input{:name => "email", :placeholder => "E-MAIL", :required => "", :type => "email"}/
+        %textarea{:cols => "1", :name => "comments", :placeholder => "TELL US EVERYTHING", :required => "", :rows => "5"}
+          :preserve
+        %button.submit{:name => "send", :type => "submit"}
+          Alright
+    .five.columns.info
+      %h4
+        Где нас найти
+      %br/
+      %p
+        Адрес: Новосибирск,
+      %p
+        ул. Николаева 11/1
+      %p
+        офис 407
+      %h4
+        Связь с нами
+      %br/
+      %p
+        %a{:href => "mail"}
+          info[at]kerweb.com
+      %h4
+        То же самое
+      %br/
+      %p
+        %a{:href => "mail"}
+          info[at]kerweb.com
+/ END CONTACT SECTION ###############################################
+/ TWITTER MODULE ###############################################
+%section#twitter_module
+  .row
+    .twelve.columns
+      #ticker.query
+        %ul.tweet_list
+          %li.tweet_even
+/ END TWITTER MODULE ###############################################
+/ SOCIAL MODULE ###############################################
+%section#social_module
+  .row
+    .twelve.columns
+      %ul
+        %li
+          %a{:href => "#", :target => "_blank"}
+            %i.icon
+              F
+        %li
+          %a{:href => "#", :target => "_blank"}
+            %i.icon
+              L
+        %li
+          %a{:href => "#", :target => "_blank"}
+            %i.icon
+              O
+/ END SOCIAL MODULE ###############################################
+/ FOOTER ###############################################
+%footer
+  .row
+    .twelve.columns
+      %img{:alt => "YOURLOGO", :src => "/assets/logo_footer.png"}/
+/ END FOOTER ###############################################
+/ JAVASCRIPTS ###############################################
+%script{:src => "/assets/jquery-1.9.1.min.js", :type => "text/javascript"}
+%script{:src => "/assets/jquery.scrollto.js"}
+%script{:src => "/assets/waypoints.min.js", :type => "text/javascript"}
+%script{:src => "/assets/jquery.tweet.js", :type => "text/javascript"}
+%script{:src => "/assets/scripts.js", :type => "text/javascript"}
+%script{:src => "/assets/grid.js"}
+/ END JAVASCRIPTS ###############################################
