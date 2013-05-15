@@ -1,13 +1,12 @@
 Kerweb::Application.routes.draw do
-  resources :projects
+	resources :projects
 
+	devise_for :users
 
-  devise_for :users
+	root :to => 'Home#index'
+	get "home/index"
 
-  root :to => 'Home#index'
-  get "home/index"
-
-  match "/portfolio" => 'Home#portfolio'
+	match '/:locale' => 'Home#index'
 
 
   # The priority is based upon order of creation:
