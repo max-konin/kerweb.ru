@@ -4,13 +4,13 @@ var mail = function(elem) {
 }
 
 $(document).ready(function() {
-	$("[rel^=imageGallery]").prettyPhoto({
+	/*$("[rel^=imageGallery]").prettyPhoto({
 		show_title: false,
 		theme: 'dark_rounded'
-	});
+	});*/
 	$("header a:contains('[at]')").on('click', mail);
-	$(".project").each(function(i, elem) {
+	/*$(".project").each(function(i, elem) {
 		$(elem).attr("id", "project-" + i);
 		slideInfo(this, "project-" + i);
-	});
+	});*/
 });

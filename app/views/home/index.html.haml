@@ -3,19 +3,19 @@
 	.row
 		.twelve.columns
 			%h1.fade-it
-				%img{:alt => "YOURLOGO", :src => "/assets/logo_header.png"}
+				%img{:alt => "Kerweb", :src => "/assets/logo_header.png"}
 			.fade-it
 				.roles
-					%div{:style => "margin-top: 0px;"}
-						We are Killers.
 					%div
-						We are Bandits.
+						We are Killers
 					%div
-						We are Bad Guys.
+						We are Bandits
 					%div
-						We are Raiders.
+						We are Bad Guys
 					%div
-						We are what you need.
+						We are Raiders
+					%div
+						We are what you need
 		/ LITTLE LOGO SEE WHAT WE DO
 		#down_button.fade-it
 			%a{:href => "#whatwedo"}
@@ -26,24 +26,24 @@
 	%nav{:style => "top: 0px;"}
 		#logo
 			%a{:href => "#"}
-				%img{:alt => "YOURLOGO", :src => "/assets/logo_small.png"}
+				%img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
 		%ul
 			%li
 				%a{:href => "#home"}
-					=t 'Home'
+					=t 'home.title'
 			%li
 				%a{:href => "#whatwedo"}
-					=t 'What_we_do'
+					=t 'what_we_do.title'
 			%li
 				%a{:href => "#contact"}
-					=t 'Contacts'
+					=t 'contacts.title'
 / END NAVIGATION ###############################################
 / WHAT WE DO SECTION ###############################################
 %section#whatwedo
 	.row
 		.twelve.columns.centered
 			%h2
-				= t 'What_we_do'
+				= t 'what_we_do.title'
 				%i.title_line
 	.row
 		/ WORKS GRID
@@ -57,35 +57,28 @@
 	.row
 		.twelve.columns.centered
 			%h2
-				=t 'Contacts'
+				=t 'contacts.title'
 				%i.title_line
 	.row
 		.eleven.columns.centered
 			%p.subtittle
-				We're currently accepting new client projects.
-				%br/
-				Think we might help? We'd love to hear from you.
+				=t 'contacts.greeting_clients.html'
 	.row
 		.seven.columns
 			%form{:action => "/", :method => "post", :name => "htmlform"}
-				%input{:name => "first_name", :placeholder => "YOUR LOVELY NAME", :required => "", :type => "text"}/
-				%input{:name => "email", :placeholder => "E-MAIL", :required => "", :type => "email"}/
-				%textarea{:cols => "1", :name => "comments", :placeholder => "TELL US EVERYTHING", :required => "", :rows => "5"}
+				%input{:name => "first_name", :placeholder => t('placeholder.first_name'), :required => "", :type => "text"}/
+				%input{:name => "email", :placeholder => t('placeholder.email'), :required => "", :type => "email"}/
+				%textarea{:cols => "1", :name => "comments", :placeholder => t('placeholder.textarea'), :required => "", :rows => "5"}
 					:preserve
 				%button.submit{:name => "send", :type => "submit"}
-					Alright
+					=t 'placeholder.submit'
 		.five.columns.info
 			%h4
-				Где нас найти
+				=t 'contacts.where_can_find'
 			%br/
-			%p
-				Адрес: Новосибирск,
-			%p
-				ул. Николаева 11/1
-			%p
-				офис 407
+			=t 'contacts.address.html'
 			%h4
-				Связь с нами
+				=t 'contacts.contact_us'
 			%br/
 			%p
 				%a{:href => "mail"}
