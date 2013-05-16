@@ -6,6 +6,9 @@ Kerweb::Application.routes.draw do
 	root :to => 'Home#index'
 	get "home/index"
 
+	get '/showOffers' => 'Home#showOffers'
+	post '/formPost' => 'Home#formPost'
+
 	match '/:locale' => 'Home#index'
 
 

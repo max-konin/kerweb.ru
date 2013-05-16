@@ -1,5 +1,5 @@
 /*
-
+	00. Some work with modal
 	01. Twitter - Remplace username by yours
 	02. Roles of Header
 	03. Smooth Scroll ( ScrollTo )
@@ -10,12 +10,18 @@
 */
 
 
+/* -- 00.  Some work with modal */
+
+setTimeout(function() {
+	jQuery(".modal").fadeOut();
+}, 3500);
+
 /* -- 01.  TWITTER MAKE IT WORK - JUST REMPLACE Google username BY YOURS -- */
 
 
      jQuery(function($){
         $("#ticker").tweet({
-          username: 'Google',
+          username: 'boobs',
           page: 1,
           avatar_size: 0,
           count: 10,

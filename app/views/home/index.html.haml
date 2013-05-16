@@ -65,10 +65,10 @@
 				=t 'contacts.greeting_clients.html'
 	.row
 		.seven.columns
-			%form{:action => "/", :method => "post", :name => "htmlform"}
-				%input{:name => "first_name", :placeholder => t('placeholder.first_name'), :required => "", :type => "text"}/
-				%input{:name => "email", :placeholder => t('placeholder.email'), :required => "", :type => "email"}/
-				%textarea{:cols => "1", :name => "comments", :placeholder => t('placeholder.textarea'), :required => "", :rows => "5"}
+			%form{:action => "/formPost", :method => "post", :name => "offerForm", :enctyoe => "multipart/form-data"}
+				%input{:name => "offer[name]", :placeholder => t('placeholder.first_name'), :required => "", :type => "text"}/
+				%input{:name => "offer[email]", :placeholder => t('placeholder.email'), :required => "", :type => "email"}/
+				%textarea{:cols => "1", :name => "offer[body]", :placeholder => t('placeholder.textarea'), :required => "", :rows => "5"}
 					:preserve
 				%button.submit{:name => "send", :type => "submit"}
 					=t 'placeholder.submit'
@@ -82,7 +82,7 @@
 			%br/
 			%p
 				%a{:href => "mail"}
-					info[at]kerweb.com
+					info[at]kerweb.ru
 / END CONTACT SECTION ###############################################
 / TWITTER MODULE ###############################################
 %section#twitter_module
@@ -105,11 +105,10 @@
 					%a{:href => "#", :target => "_blank"}
 						%i.icon
 							L
-				%li
-					%a{:href => "#", :target => "_blank"}
-						%i.icon
-							O
 / END SOCIAL MODULE ###############################################
+- if @notice
+	%div.modal
+		%p= @notice
 / FOOTER ###############################################
 %footer
 	.row

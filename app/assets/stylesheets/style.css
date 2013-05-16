@@ -26,7 +26,12 @@ html, body {
 	top:0px;
 	left:0px;
 	bottom:0px;}
-	
+
+.modal {
+	text-align: center;
+	font-size: large;
+}
+
 .row {
 	text-align: center;}
 
@@ -177,7 +182,7 @@ footer {
 
 #home h1 {
 	position:relative;
-	margin:10% auto 0px auto;
+	margin:20% auto 0px auto;
 	z-index: 999;}
 
 .roles {
@@ -264,7 +269,7 @@ footer {
 
 /* SELECTED ILLUSTRATION */
 
-.og-grid li.og-expanded > a::after {
+/*.og-grid li.og-expanded > a::after {
 	top: auto;
 	border: solid transparent;
 	content: " ";
@@ -274,7 +279,7 @@ footer {
 	pointer-events: none;
 	border-bottom-color: #ddd;
 	border-width: 15px;
-	margin: 175px 0px 0px -140px;}
+	margin: 175px 0px 0px -140px;}*/
 
 /* PREVIEW CLASS */
 
