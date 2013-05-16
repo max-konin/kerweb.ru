@@ -1,7 +1,21 @@
 ru:
-  Home: 'Вверх'
-  What_we_do: 'Наши работы'
-  Contacts: 'Контакты'
+  home: 
+    title: 'Вверх'
+  what_we_do:
+    title: 'Наши работы'
+  contacts: 
+    title: 'Контакты'
+    where_can_find: 'Где нас найти'
+    address:
+      html: '<p>г. Новосибирск</p><p>ул. Николаева 11/1</p><p>офис 407</p>'
+    contact_us: 'Связь с нами'
+    greeting_clients:
+      html: 'Мы в данный момент рассматриваем получение новых интересных заданий. <br/> Думаете мы можем помочь? Мы очень хотели бы услышать от вас чем.'
+  placeholder:
+    first_name: 'ВАШЕ ЗАМЕЧАТЕЛЬНОЕ ИМЯ'
+    email: 'E-MAIL'
+    textarea: 'РАССКАЖИТЕ НАМ ВСЕ'
+    submit: 'ОК'
   date:
     abbr_day_names:
     - Вс

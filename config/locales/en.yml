@@ -1,7 +1,20 @@
 en:
-  Home: 'Home'
-  What_we_do: 'What we do'
-  Contacts: 'Contacts'
+  home: 
+    title: 'Home'
+  what_we_do:
+    title: 'What we do'
+  contacts: 
+    title: 'Contacts'
+    where_can_find: 'Where find us'
+    address:
+        html: '<p>Novosibirsk city,</p><p>Nikolaeva street 11/1</p><p>office 407</p>'
+    contact_us: 'Contact us'
+    greeting_clients:
+      html: "We're currently accepting new client projects.<br/>Think we might help? We'd love to hear from you."
+  placeholder:
+    first_name: 'YOUR LOVELY NAME'
+    email: 'E-MAIL'
+    textarea: 'TELL US EVERYTHING'
   date:
     abbr_day_names:
     - Sun
