@@ -5,6 +5,10 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Working with images
+gem "paperclip"
+
+# Databases
 gem 'sqlite3'
 
 gem 'devise'
@@ -43,3 +47,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'execjs'
 gem 'therubyracer'
+
+# Internationalization
+
+gem 'i18n'
