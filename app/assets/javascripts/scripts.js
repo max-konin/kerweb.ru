@@ -21,7 +21,7 @@ setTimeout(function() {
 
      jQuery(function($){
         $("#ticker").tweet({
-          username: 'boobs',
+          username: 'kernelweb',
           page: 1,
           avatar_size: 0,
           count: 10,

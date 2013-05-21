@@ -107,10 +107,9 @@ nav ul li a {
 	position:relative;
 	display:inline-block;
 	font-weight: 300;
-	text-decoration:none;
+	text-decoration:underline;
 	font-size:12px;
 	text-transform:uppercase;
-	text-decoration:none;
 	display:block;
 	-webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -120,6 +119,7 @@ nav ul li a {
 
 nav li a:hover,
 nav li a.selected {
+	text-decoration: underline;
 	color:#00aed7;}
 
 .sticky {
@@ -264,22 +264,23 @@ footer {
 	display: inline-block;
 	margin: 0px 15px 20px 0px;
 	vertical-align: top;
-/*	height: 185px;*/
+	height: 185px;
 }
 
 /* SELECTED ILLUSTRATION */
 
-/*.og-grid li.og-expanded > a::after {
-	top: auto;
+.og-grid li.og-expanded > a::after {
 	border: solid transparent;
 	content: " ";
+	top: auto;
 	height: 0;
 	width: 0;
 	position: absolute;
 	pointer-events: none;
 	border-bottom-color: #ddd;
 	border-width: 15px;
-	margin: 175px 0px 0px -140px;}*/
+	margin: 175px 0px 0px -140px;
+}
 
 /* PREVIEW CLASS */
 
@@ -355,6 +356,7 @@ footer {
 	color: #FFF;
 	font-family:'OpenSansLight', sans-serif;
 	text-transform: uppercase;
+	text-decoration: underline;
 	letter-spacing: 2px;
 	padding: 10px 20px;
 	background: #00aed7;
@@ -495,6 +497,7 @@ footer {
 	letter-spacing:1px;
 	padding:5px 10px;
 	text-transform:uppercase;
+	text-decoration: underline;
 	transition:all .3s ease-in-out;
 	width:100%;}
 
@@ -561,7 +564,7 @@ footer {
 #contact .info a {
 	color:#00aed7;
 	letter-spacing:1px;
-	text-decoration:none;
+	text-decoration:underline;
 	-webkit-transition:all .3s ease-in-out;
 	-moz-transition:all .3s ease-in-out;
 	-ms-transition:all .3s ease-in-out;
