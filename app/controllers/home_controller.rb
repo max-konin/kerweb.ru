@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 	def formPost
 		@offer = Offer.create(params[:offer])
 		if @offer.save
-			redirect_to :action => "index", :notice => "Мы с удовольствием прочтем ваше сообщение."
+			redirect_to "/", :notice => "Мы с удовольствием прочтем ваше сообщение."
 		end
 	end
 
