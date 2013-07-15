@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130508073723) do
+ActiveRecord::Schema.define(:version => 20130516093251) do
+
+  create_table "offers", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -20,8 +28,16 @@ ActiveRecord::Schema.define(:version => 20130508073723) do
     t.text     "body"
     t.string   "href"
     t.boolean  "top"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.string   "pictureMini_file_name"
+    t.string   "pictureMini_content_type"
+    t.integer  "pictureMini_file_size"
+    t.datetime "pictureMini_updated_at"
   end
 
   create_table "users", :force => true do |t|
