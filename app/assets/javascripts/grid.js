@@ -340,7 +340,7 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+			this.$details = $( '<div class="og-details show-all"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -354,8 +354,12 @@ var Grid = (function() {
 			}
 		},
 		update : function( $item ) {
+		
+			!this._timeout || clearTimeout(this._timeout)
+			_tempItem = undefined
 
 			if( $item ) {
+				_tempItem = this.$item
 				this.$item = $item;
 			}
 			
@@ -383,6 +387,12 @@ var Grid = (function() {
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
+
+			this.setHeights();
+
+			this._timeout = setTimeout(function(){
+				!_tempItem || _tempItem.css('height', _tempItem.data('height'))
+			}, 300)
 
 			var self = this;
 			
@@ -418,6 +428,8 @@ var Grid = (function() {
 
 		},
 		close : function() {
+			
+			!this._timeout || clearTimeout(this._timeout)
 
 			var self = this,
 				onEndFn = function() {
@@ -435,6 +447,9 @@ var Grid = (function() {
 				}
 				this.$previewEl.css( 'height', 0 );
 				// the current expanded item (might be different from this.$item)
+				$items.each(function(i, e) {
+					$(e).css('height', $(e).data('height'))
+				});
 				var $expandedItem = $items.eq( this.expandedIdx );
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 
@@ -449,12 +464,14 @@ var Grid = (function() {
 		},
 		calcHeight : function() {
 
-			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
-				itemHeight = winsize.height;
+			var heightPreview = this.$details.height() + 120,
+				itemHeight = heightPreview + 200;
+			//var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
+			//	itemHeight = winsize.height;
 
 			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
-				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
+				itemHeight = settings.minHeight + 200// + this.$item.data( 'height' ) + marginExpanded;
 			}
 
 			this.height = heightPreview;
@@ -486,9 +503,10 @@ var Grid = (function() {
 			// case 1 : preview height + item height fits in window´s height
 			// case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
-			var position = this.$item.data( 'offsetTop' ),
-				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
+			var position = this.$item.data( 'offsetTop' ) - 60,
+				previewOffsetT = this.$previewEl.offset().top - scrollExtra - 60,
+				scrollVal = position;
+				//scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 			
 			$body.animate( { scrollTop : scrollVal }, settings.speed );
 
