@@ -135,7 +135,6 @@ nav select {
 
 /* 03. SETTING OF MAIN SECTIONS  ================================================== */
 
-
 #home {
 	width:100%;
 	height:100%;
@@ -169,7 +168,7 @@ nav select {
 	
 #social_module {
 	background-color:#fFF;
-	padding:0px 0px 30px;}
+	padding:30px 0px 30px;}
 	
 	
 footer {

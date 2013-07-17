@@ -132,8 +132,8 @@ $(function() {
       // Create default option "Go to..."
       $("<option />", {
          "selected": "selected",
-         "value"   : "",
-         "text"    : ""
+         "value"   : "#whatwedo",
+         "text"    : "..."
       }).appendTo("nav select");
       
       // Populate dropdown with menu items
