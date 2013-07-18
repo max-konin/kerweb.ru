@@ -388,6 +388,16 @@ var Grid = (function() {
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
 
+//--------------------------------------------------------------------------------------
+
+			if(eldata.href.indexOf("nsk-sinegorie") >= 0) {
+				this.$href.hide();
+			} else {
+				this.$href.show();
+			}
+
+//-------------------------------------------------------------------------------------
+
 			this.setHeights();
 
 			this._timeout = setTimeout(function(){
