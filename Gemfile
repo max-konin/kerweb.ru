@@ -8,9 +8,6 @@ gem 'rails', '3.2.13'
 # Working with images
 gem "paperclip"
 
-# Databases
-gem 'sqlite3'
-
 gem 'devise'
 
 gem 'mysql2'
