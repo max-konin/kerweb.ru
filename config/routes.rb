@@ -1,9 +1,11 @@
 Kerweb::Application.routes.draw do
-	resources :projects
+  root :to => 'Home#index'
 
-	devise_for :users
+  resources :projects
 
-	root :to => 'Home#index'
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
 	get "home/index"
 
 	get '/showOffers' => 'Home#showOffers'

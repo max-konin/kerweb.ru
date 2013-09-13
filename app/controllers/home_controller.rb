@@ -1,6 +1,3 @@
-#!/bin/env ruby
-# encoding: utf-8
-
 class HomeController < ApplicationController
 	def index
 		I18n.locale = params[:locale]
@@ -11,12 +8,8 @@ class HomeController < ApplicationController
 
 	def formPost
 		@offer = Offer.create(params[:offer])
-		if @offer.save
-			redirect_to "/", :notice => "Мы с удовольствием прочтем ваше сообщение."
-		end
-	end
-
-	def showOffers
-		@offers = Offer.all
+		@offer.state = 'new'
+		notice = if @offer.save then t 'notice.success' else t 'notice.failure' end
+		redirect_to :rails_root, :notice => notice
 	end
 end

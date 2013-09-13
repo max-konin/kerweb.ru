@@ -5,7 +5,7 @@ class CreateOffers < ActiveRecord::Migration
 	  t.string :email
 	  t.text :body
 
-      t.timestamps
+     t.timestamps
     end
   end
 end
