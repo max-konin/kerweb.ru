@@ -6,7 +6,7 @@
 	04. Navigation - Selected and sticky Navigation
 	05. Mobile Navigation
 	06. Works Grid
-			
+
 */
 
 
@@ -14,7 +14,7 @@
 
 setTimeout(function() {
 	jQuery(".modal").fadeOut();
-}, 3500);
+}, 4500);
 
 /* -- 01.  TWITTER MAKE IT WORK - JUST REMPLACE Google username BY YOURS -- */
 

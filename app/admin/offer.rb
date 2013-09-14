@@ -3,12 +3,8 @@ ActiveAdmin.register Offer do
 		column :name
 		column :email
 		column :state
-		action :open
+		default_actions
 	end
 
 	filter :name
-
-	collection_action do
-
-	end
 end

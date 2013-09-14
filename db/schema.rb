@@ -44,16 +44,16 @@ ActiveRecord::Schema.define(:version => 20130913130131) do
     t.text     "body"
     t.string   "href"
     t.boolean  "top"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-    t.string   "pictureMini_file_name"
-    t.string   "pictureMini_content_type"
-    t.integer  "pictureMini_file_size"
-    t.datetime "pictureMini_updated_at"
+    t.string   "picture_mini_file_name"
+    t.string   "picture_mini_content_type"
+    t.integer  "picture_mini_file_size"
+    t.datetime "picture_mini_updated_at"
   end
 
   create_table "users", :force => true do |t|

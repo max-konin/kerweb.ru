@@ -2,7 +2,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: kerweb
+  database: kerweb_development
   username: kerweb
   password: kerweb
   host: localhost
@@ -14,7 +14,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: kerweb
+  database: kerweb_test
   username: kerweb
   password: kerweb
   host: localhost

@@ -10,6 +10,6 @@ class HomeController < ApplicationController
 		@offer = Offer.create(params[:offer])
 		@offer.state = 'new'
 		notice = if @offer.save then t 'notice.success' else t 'notice.failure' end
-		redirect_to :rails_root, :notice => notice
+		redirect_to "/", :notice => notice
 	end
 end
