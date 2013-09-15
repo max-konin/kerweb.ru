@@ -18,3 +18,5 @@
 /public/images
 
 Gemfile.lock
+
+*schema.rb
