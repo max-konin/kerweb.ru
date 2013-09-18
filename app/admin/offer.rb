@@ -1,9 +1,10 @@
 ActiveAdmin.register Offer do
   index do
-    column :name
+    column :name do |offer|
+      link_to offer.name, admin_offer_path offer
+    end
     column :email
     column :state
-    default_actions
   end
 
   filter :state
