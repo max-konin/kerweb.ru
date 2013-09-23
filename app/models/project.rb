@@ -3,13 +3,13 @@ class Project < ActiveRecord::Base
 
   has_attached_file :picture,
 	  :styles => { :fit => "1280x" },
-	  :default_url => "images/:style/missing.png",
-	  :url => "images/:style/:filename",
-	  :path => "public/images/:style/:filename"
+	  :default_url => "system/images/:style/missing.png",
+	  :url => "system/images/:style/:filename",
+	  :path => "public/system/images/:style/:filename"
 
   has_attached_file :picture_mini,
 	  :styles => { :mini => "250x185!" },
-	  :default_url => "images/:style/missing",
-	  :url => "images/:style/:filename",
-	  :path => "public/images/:style/:filename"
+	  :default_url => "system/images/:style/missing",
+	  :url => "system/images/:style/:filename",
+	  :path => "public/system/images/:style/:filename"
 end
