@@ -11,7 +11,7 @@ Kerweb::Application.routes.draw do
 	get '/showOffers' => 'Home#showOffers'
 	post '/formPost' => 'Home#formPost'
 
-	match '/:locale' => 'Home#index'
+	#match '/:locale' => 'Home#index'
 
 
   # The priority is based upon order of creation:
