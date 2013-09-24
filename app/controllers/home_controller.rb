@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 		I18n.locale = params[:locale]
 		@notice = params[:notice]
 		@title = 'Kernel Web Studio'
-		@projects = Project.all
+		@projects = Project.all.order("created_at DESC")
 	end
 
 	def formPost
