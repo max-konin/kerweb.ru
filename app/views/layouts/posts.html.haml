@@ -12,6 +12,7 @@
   = stylesheet_link_tag 'style'
   = stylesheet_link_tag 'stylesOnHtml'
   = javascript_include_tag 'kerweb'
+  = javascript_include_tag 'posts'
 
 %body.posts
   .nav-container{:style => "height: auto;"}
@@ -20,7 +21,10 @@
         %img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
       %ul
         %li
-          %a{:href => '/'}
+          %a{:href => '/', 'data-no-turbolink' => true}
             =t 'to_home'
+        %li
+          =link_to 'Все посты', posts_path
+
   .container
     = yield
