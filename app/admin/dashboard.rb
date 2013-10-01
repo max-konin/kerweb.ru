@@ -10,17 +10,17 @@ ActiveAdmin.register_page "Dashboard" do
     #  end
     #end
 
-	 columns do
-		column do
-			panel "Offers" do
-				ul do
-					Offer.all.map do |o|
-						li link_to o.name, admin_offer_path(o)
-					end
-				end
-			end
-		end
-	end
+    columns do
+      column do
+        panel "Offers" do
+          ul do
+            Offer.all.map do |o|
+              li link_to o.name, admin_offer_path(o)
+            end
+          end
+        end
+      end
+    end
 
     # Here is an example of a simple dashboard with columns and panels.
     #

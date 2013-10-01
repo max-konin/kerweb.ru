@@ -395,6 +395,9 @@ var Grid = (function() {
 			} else {
 				this.$href.show();
 			}
+            if (this.$href.attr('href') == ''){
+                this.$href.hide();
+            }
 
 //-------------------------------------------------------------------------------------
 

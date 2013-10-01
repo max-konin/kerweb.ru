@@ -224,8 +224,6 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
 
-  # Mysterius secret
-  config.secret_key = '96ba4ee33cff77b1aff3dab7520579b613485ca36c91721157dd936e97095adea82a5720163e52cb17b649f24267059eaf6a2259942b361dcc857de232c7b4ea'
 
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
