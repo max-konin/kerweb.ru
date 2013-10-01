@@ -1,4 +1,6 @@
 ru:
+  to_home: 'на главную'
+  blog: 'Блог'
   home: 
     title: 'Вверх'
   what_we_do:

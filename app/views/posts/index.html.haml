@@ -1,12 +1,12 @@
 - content_for :title do
-  =t(:posts_list)
+  ='Посты'
 - content_for :description do
-  =t(:posts_list_description)
+  ='Посты блога компании Kerweb. Преимущественно по веб программированию'
 
 %h1 Посты
 -@posts.each do |post|
   %h2
-    =post.title
+    =link_to post.title, post
   .post_preview
     =post.preview unless post.preview.blank?
 

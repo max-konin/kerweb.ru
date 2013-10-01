@@ -6,8 +6,8 @@
 %h1
   =@post.title
 .post_preview
-  =@post.preview unless post.preview.blank?
+  =@post.preview unless @post.preview.blank?
 .post_body
-  =@post.body unless post.preview.blank?
+  =@post.body unless @post.preview.blank?
 
 
