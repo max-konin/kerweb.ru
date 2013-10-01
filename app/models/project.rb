@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
   attr_accessible :body, :desc, :href, :name, :picture, :picture_mini
 
   has_attached_file :picture,
-	  :styles => { :fit => "1280x" },
+	  :styles => { :fit => "800x" },
 	  :default_url => "images/:style/missing.png",
 	  :url => "images/:style/:filename",
 	  :path => "public/images/workImg/:style/:filename"
