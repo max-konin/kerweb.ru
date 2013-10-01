@@ -1,2 +1,13 @@
-%h1 Posts#show
-%p Find me in app/views/posts/show.html.haml
+- content_for :title do
+  =@post.title
+- content_for :description do
+  =@post.preview
+
+%h1
+  =@post.title
+.post_preview
+  =@post.preview unless post.preview.blank?
+.post_body
+  =@post.body unless post.preview.blank?
+
+

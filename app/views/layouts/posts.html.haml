@@ -1,14 +1,26 @@
 !!!
 %html
-  = render 'home/head'
-%body
+  %title
+    =yield :title
+  %meta{:content => yield(:description), :name => "description"}
+
+  = stylesheet_link_tag 'bootstrap.min'
+  = stylesheet_link_tag 'bootstrap-responsive.min.css'
+  = stylesheet_link_tag 'kerweb'
+  = stylesheet_link_tag 'prettyPhoto'
+  = stylesheet_link_tag 'media'
+  = stylesheet_link_tag 'style'
+  = stylesheet_link_tag 'stylesOnHtml'
+  = javascript_include_tag 'kerweb'
+
+%body.posts
   .nav-container{:style => "height: auto;"}
     %nav{:style => "top: 0px;"}
       #logo
         %img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
       %ul
         %li
-          %a{:href => "#home"}
-            =t 'home.title'
+          %a{:href => '/'}
+            =t 'to_home'
   .container
     = yield
