@@ -62,7 +62,7 @@ setInterval(function() {
 /* -- 03. SCROLL TO  -- */
 
 
-$('nav a, #down_button a').click(function(e){
+$('nav  a.scrollable , #down_button a').click(function(e){
     $('html,body').scrollTo(this.hash, this.hash);
     e.preventDefault();
 });
