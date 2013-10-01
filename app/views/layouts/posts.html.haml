@@ -1,0 +1,14 @@
+!!!
+%html
+  = render 'home/head'
+%body
+  .nav-container{:style => "height: auto;"}
+    %nav{:style => "top: 0px;"}
+      #logo
+        %img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
+      %ul
+        %li
+          %a{:href => "#home"}
+            =t 'home.title'
+  .container
+    = yield

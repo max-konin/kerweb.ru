@@ -1,14 +1,16 @@
 Kerweb::Application.routes.draw do
+
   root :to => 'Home#index'
 
   resources :projects
+  resources :posts, only: [:index, :show]
 
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
 	get "home/index"
 
-	get '/showOffers' => 'Home#showOffers'
+
 	post '/formPost' => 'Home#formPost'
 
 	#match '/:locale' => 'Home#index'
