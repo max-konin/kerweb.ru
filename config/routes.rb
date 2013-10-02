@@ -1,9 +1,17 @@
 Kerweb::Application.routes.draw do
 
+    namespace :mercury do
+      resources :images
+    end
+
+  mount Mercury::Engine => '/'
+
   root :to => 'Home#index'
 
   resources :projects
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show, :update]  do
+    member { put :mercury_update }
+  end
 
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

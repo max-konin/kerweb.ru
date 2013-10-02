@@ -12,6 +12,7 @@ gem 'devise'
 
 gem 'mysql2'
 gem 'turbolinks'
+gem 'mercury-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -58,3 +59,4 @@ gem 'therubyracer'
 
 # Internationalization
 gem 'i18n'
+gem 'paperclip'

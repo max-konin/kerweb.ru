@@ -14,4 +14,13 @@ class PostsController < ApplicationController
       format.json {render json: @post}
     end
   end
+
+  def mercury_update
+    @post = Post.find(params[:id])
+    @post.title   = params[:content][:title][:value]
+    @post.preview = params[:content][:preview][:value]
+    @post.body    = params[:content][:body][:value]
+    @post.save!
+    render text: ""
+  end
 end
