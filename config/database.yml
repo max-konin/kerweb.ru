@@ -24,7 +24,7 @@ production:
   adapter: mysql2
   encoding: utf8
   database: kerweb
-  username: root
-  password: qwas
+  username: kerweb
+  password: ztSFL2MDr9vPTDQD
   host: localhost
   port: 3306
