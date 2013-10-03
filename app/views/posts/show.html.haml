@@ -9,9 +9,8 @@
   =raw @post.preview unless @post.preview.blank?
 #body{'data-mercury' => 'full'}
   =raw @post.body unless @post.preview.blank?
+= render partial: 'home/vk_body'
 
 -if current_user
   =link_to "Edit",  "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_post_path},
   style: 'display: none'
-
-
