@@ -1,14 +1,14 @@
 - content_for :title do
-  =@post.title
+  =raw @post.title
 - content_for :description do
   =@post.preview
 
 %h1#title{'data-mercury' => 'full'}
-  =@post.title
+  =raw @post.title
 #preview{'data-mercury' => 'full'}
-  =@post.preview unless @post.preview.blank?
+  =raw @post.preview unless @post.preview.blank?
 #body{'data-mercury' => 'full'}
-  =@post.body unless @post.preview.blank?
+  =raw @post.body unless @post.preview.blank?
 
 -if current_user
   =link_to "Edit",  "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_post_path},
