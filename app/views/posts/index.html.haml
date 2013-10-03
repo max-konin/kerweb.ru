@@ -6,7 +6,7 @@
 %h1 Посты
 -@posts.each do |post|
   %h2
-    =raw link_to post.title, post
+    = link_to raw(post.title), post
   .post_preview
     =raw post.preview unless post.preview.blank?
 
