@@ -9,7 +9,7 @@ Kerweb::Application.routes.draw do
   root :to => 'Home#index'
 
   resources :projects
-  resources :posts, only: [:index, :show, :update]  do
+  resources :posts, only: [:index, :show, :update], path: 'blog'  do
     member { put :mercury_update }
   end
 
