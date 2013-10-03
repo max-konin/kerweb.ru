@@ -26,8 +26,8 @@
  * Require any files you want to use that either extend, or change the default Mercury behavior.
  * require mercury_overrides
  */
-//= require jquery-1.7
-//= require jquery-ui
+
+
 window.Mercury = {
 
   // # Mercury Configuration
