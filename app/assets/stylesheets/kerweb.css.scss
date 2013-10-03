@@ -266,7 +266,7 @@ table {
   background-color: #EEE;
   #preview{
     margin-top: 10px;
-    width: 50%;
+    width: 100%;
   }
   #body{
     margin-top: 5px;
@@ -274,4 +274,10 @@ table {
 }
 .container{
   width: 980px;
+}
+#vk_comments{
+  width: 100% !important;
+  iframe{
+    width: 100% !important;
+  }
 }

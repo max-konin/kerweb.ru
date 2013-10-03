@@ -26,6 +26,13 @@
             =t 'to_home'
         %li
           =link_to 'Все посты', posts_path
+  .posts
+    .container
+      = yield
+/ FOOTER ###############################################
+%footer
+  .row
+    .twelve.columns
+      %a{:href => '/', 'data-no-turbolink' => true}
+        %img{:alt => "YOURLOGO", :src => "/assets/logo_footer.png", }
 
-  .container
-    = yield

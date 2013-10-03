@@ -119,7 +119,8 @@
 %footer
     .row
         .twelve.columns
-            %img{:alt => "YOURLOGO", :src => "/assets/logo_footer.png"}/
+            %a{:href => '/', 'data-no-turbolink' => true}
+                %img{:alt => "YOURLOGO", :src => "/assets/logo_footer.png", }
 / END FOOTER ###############################################
 - if !notice.blank?
     %div.modal

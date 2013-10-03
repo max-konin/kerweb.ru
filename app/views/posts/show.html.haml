@@ -3,7 +3,7 @@
 - content_for :description do
   =@post.preview
 
-%h1#title{'data-mercury' => 'full'}
+%h1#title{'data-mercury' => 'simple'}
   =raw @post.title
 #preview{'data-mercury' => 'full'}
   =raw @post.preview unless @post.preview.blank?
