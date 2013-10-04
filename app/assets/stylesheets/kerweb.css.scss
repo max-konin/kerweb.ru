@@ -270,17 +270,22 @@ table {
   }
   #body{
     margin-top: 10px;
+
   }
-  h1 h2{
+  h1 h2 h3{
     font-weight: normal;
+  }
+  .post{
+    margin-bottom: 40px;
   }
 }
 .container{
   width: 980px;
+
 }
 #vk_comments{
   width: 100% !important;
-  margin-top: 5px;
+  margin-top: 50px;
   iframe{
     width: 100% !important;
   }
