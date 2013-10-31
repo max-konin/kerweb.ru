@@ -7,7 +7,7 @@ en:
     title: 'Contacts'
     where_can_find: 'Where find us'
     address:
-        html: '<p>Academpark</p><p>Novosibirsk city,</p><p>Nikolaeva street 11</p><p>office 407</p>'
+      html: '<p>Academpark</p><p>Novosibirsk city,</p><p>Nikolaeva street 11</p><p>office 407</p>'
     contact_us: 'Contact us'
     greeting_clients:
       html: "Every day we are solving the problems and make world better<br/>How can we help?"
