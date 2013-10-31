@@ -7,14 +7,14 @@ en:
     title: 'Contacts'
     where_can_find: 'Where find us'
     address:
-        html: '<p>Novosibirsk city,</p><p>Nikolaeva street 11/1</p><p>office 407</p>'
+        html: '<p>Academpark</p><p>Novosibirsk city,</p><p>Nikolaeva street 11</p><p>office 407</p>'
     contact_us: 'Contact us'
     greeting_clients:
-      html: "We're currently accepting new client projects.<br/>Think we might help? We'd love to hear from you."
+      html: "Every day we are solving the problems and make world better<br/>How can we help?"
   placeholder:
-    first_name: 'YOUR LOVELY NAME'
-    email: 'E-MAIL'
-    textarea: 'TELL US EVERYTHING'
+    first_name: 'What's your name?'
+    email: 'enter your e-mail'
+    textarea: 'What is your question?'
   notice:
     success: "We read you offer with pleasure."
     failure: "Something failed. We sorry, can you request offer again?"
