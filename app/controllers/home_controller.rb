@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 	end
 
 	def formPost
-		@offer = Offer.create(params[:offer])
+		@offer = Offer.new params[:offer]
 		@offer.state = 'new'
 		notice = if @offer.save then t 'notice.success' else t 'notice.failure' end
 		redirect_to "/", :notice => notice
