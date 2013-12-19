@@ -3,5 +3,5 @@ class Offer < ActiveRecord::Base
 
   STATES = %w(new viewed)
 
-  validates_inclusion_of :state, :in => STATES
+  #validates_inclusion_of :state, :in => STATES
 end

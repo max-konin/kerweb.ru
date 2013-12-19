@@ -5,6 +5,7 @@ ActiveAdmin.register Offer do
     end
     column :email
     column :state
+    column :body
   end
 
   filter :state
