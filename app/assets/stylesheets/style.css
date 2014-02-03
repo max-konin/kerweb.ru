@@ -80,7 +80,7 @@ nav #logo {
 	float:left;
 	color:#212121;
 	margin-left:10px;
-	padding:15px;}
+	padding: 5px 15px ;}
 	
 nav {
 	z-index: 42;
@@ -175,6 +175,8 @@ footer {
 	padding:20px 0;
 	background-color:#333;}
 
+section{
+    position: relative;}
 
 /* 04 HOME SECTION  ================================================== */
 
@@ -183,6 +185,67 @@ footer {
 	position:relative;
 	margin:20% auto 0px auto;
 	z-index: 999;}
+
+#logo_table{
+    border: 0;
+    border-collapse: collapse;
+    cellpadding: 0;
+    cellspacing: 0;
+}
+
+#logo_table tr:nth-child(2) td{
+    height: 140px;
+}
+
+#logo_table tr td:nth-child(2){
+    width: 200px;
+    background: #ffffff;
+    opacity: 0.8;
+}
+
+#logo_table tr:nth-child(2) td:first-child{
+    background: url('/assets/logo_vlines.png');
+    background-position: right;
+}
+
+#logo_img{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 230px;
+    background: url('/assets/logo_img_bg.png') no-repeat;
+    /*background-image: url('/assets/logo_img.png');*/
+}
+
+#logo_table div, img { vertical-align: inherit; }
+
+#logo_arrows{
+    display: inline-block;
+    height: 100%;
+    background: url('/assets/logo_arrow.png')
+}
+
+#home #logo_text {
+    position: relative;
+    height: 100%;
+    width: 175px;
+    margin-right: 20px;
+}
+
+#home #logo_text #kernel_web{
+    margin-left: 10px;
+    text-align: right;
+    font-size: 32px;
+    line-height: 1;
+    color: #2b2a29;}
+
+#home #logo_text #dev_studio{
+    margin-top: 10px;
+    font-family: OpenSansLightRegular;
+    text-align: right;
+    font-size: 28px;
+    line-height: 1;
+    color: #898989;}
 
 .roles {
     font-size: 36pt;  

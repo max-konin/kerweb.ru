@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '<4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Working with images
-gem "paperclip"
-
+gem 'mysql2', '0.3.11'
 gem 'devise'
-
-gem 'mysql2'
 gem 'turbolinks'
 gem 'mercury-rails'
+gem 'haml-rails'
+gem 'activeadmin'
+gem 'meta_search', '>= 1.1.0.pre'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +23,8 @@ group :assets do
   # JQuery section
   gem 'jquery-rails', '< 3.0.0'
 
+  gem 'therubyracer', platforms: :ruby
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -30,8 +32,8 @@ group :assets do
 end
 
 group :development do
-  gem "capistrano"
-  gem "rvm-capistrano"
+  gem 'capistrano'
+  gem 'rvm-capistrano'
 end
 
 # To use ActiveModel has_secure_password
@@ -41,22 +43,24 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'unicorn', platforms: :ruby
 
 # Deploy with Capistrano
 # gem 'capistrano'
 
 # Active Admin
-gem 'activeadmin'
-gem 'meta_search', '>= 1.1.0.pre'
 
 # To use debugger
 # gem 'debugger'
 
-gem 'haml-rails'
 gem 'execjs'
-gem 'therubyracer'
 
 # Internationalization
 gem 'i18n'
 gem 'paperclip'
+
+#local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.local')
+#if File.exists?(local_gemfile)
+#  puts 'Loading Gemfile.local ...' if $DEBUG # `ruby -d` or `bundle -v`
+#  instance_eval File.read(local_gemfile)
+#end

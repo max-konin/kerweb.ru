@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+resize = ->
+  height = ($(window).height() - 140) / 2
+  width = ($(window).width() - 200) / 2
+  $('.js_height td').css('height', height)
+  $('.js_width').css('width', width)
+  $('#logo_arrows').css('width',width - 230)
+ready = ->
+  resize()
+  $(window).resize resize
+$(document).ready ready
