@@ -556,8 +556,8 @@ section{
 	-ms-transition:all .3s ease-in-out;
 	-o-transition:all .3s ease-in-out;
 	-webkit-transition:all .3s ease-in-out;
-	background:#00aed7;
-	border:2px solid #00aed7;
+	background:#d1191d;
+	border:2px solid #d1191d;
 	color:#FFF;
 	font-size:12px;
 	height:40px;
@@ -592,8 +592,8 @@ section{
 	background:#FFF url(/assets/valid.png);
 	background-position:98% 5px;
 	background-repeat:no-repeat;
-	border-color:#00aed7;
-	color:#00aed7;}
+	border-color:#999;
+	color:#999;}
 
 /* INPUT AND TEXTAREA WHEN INVALID : NOT GOOD GOES RED */
 
