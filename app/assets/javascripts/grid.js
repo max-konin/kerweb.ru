@@ -251,13 +251,22 @@ var Grid = (function() {
 		// also close if clicking on the item´s cross
 		$items.on( 'click', 'span.og-close', function() {
 			hidePreview();
+            $( 'img' ).removeClass('active_preview')
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
 
 			var $item = $( this ).parent();
 			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
-			return false;
+			if ( current === $item.index() ) {
+                hidePreview();
+                $( this ).children().removeClass('active_preview')
+            }
+            else {
+                showPreview( $item );
+                $( 'img' ).removeClass('active_preview')
+                $( this ).children().addClass('active_preview')
+            }
+            return false;
 
 		} );
 
