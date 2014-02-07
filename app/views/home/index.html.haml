@@ -30,11 +30,9 @@
 .nav-container{:style => "height: auto;"}
     %nav{:style => "top: 0px;"}
         #logo
-            %img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
+            %a{:href => "#home"}
+                %img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
         %ul
-            %li
-                %a{:href => "#home"}
-                    =t 'home.title'
             %li
                 %a{:href => "#whatwedo"}
                     =t 'what_we_do.title'
