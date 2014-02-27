@@ -743,7 +743,9 @@ section{
 .icon:hover{
 	color:#00aed7;}
 
-
+#logo_text, #logo_img img{
+  display: none
+}
 
 
 
