@@ -117,7 +117,16 @@ $(function() {
 		},
 		offset: '25%'
 	})
-	
+
+    $("nav a[href*=#]").bind("click", function(e) {
+        var anchor;
+        anchor = $(this);
+        $("html, body").stop().animate({
+            scrollTop: $(anchor.attr("href")).offset().top
+        }, 500);
+        e.preventDefault();
+        return false;
+    });
 
 });
 
