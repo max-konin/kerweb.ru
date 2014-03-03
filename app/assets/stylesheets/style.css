@@ -139,12 +139,7 @@ nav select {
 	width:100%;
 	height:100%;
 	color:#FFF;
-	background: url('/assets/background_edit.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment : fixed;  /* FIXED FOR IE */}
+}
 
 #whatwedo {
 	background-color:#EEE;
@@ -191,6 +186,7 @@ section{
     border-collapse: collapse;
     cellpadding: 0;
     cellspacing: 0;
+    background-color: transparent;
 }
 
 #logo_table tr:nth-child(2) td{
@@ -743,7 +739,7 @@ section{
 .icon:hover{
 	color:#00aed7;}
 
-#logo_text, #logo_img img{
+#logo_table{
   display: none
 }
 
