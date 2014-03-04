@@ -123,7 +123,7 @@ $(function() {
         anchor = $(this);
         $("html, body").stop().animate({
             scrollTop: $(anchor.attr("href")).offset().top
-        }, 500);
+        }, 750);
         e.preventDefault();
         return false;
     });
