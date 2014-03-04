@@ -4,7 +4,7 @@ $(window).load ->
 
 parallax = ->
   scrolled = $(window).scrollTop()
-  $("#logo-bg").css "bottom", -(scrolled * 0.5) + "px"
+  $("#logo-bg").css "bottom", -(scrolled * 0.15) + "px"
   return
 
 $(window).scroll (e) ->
