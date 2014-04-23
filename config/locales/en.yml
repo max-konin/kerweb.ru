@@ -10,14 +10,14 @@ en:
       html: '<p>Academpark</p><p>Novosibirsk city,</p><p>Nikolaeva street 11</p><p>office 407</p>'
     contact_us: 'Contact us'
     greeting_clients:
-      html: "Every day we are solving the problems and make world better<br/>How can we help?"
+      html: "Our work is to solve your problems."
   placeholder:
-    first_name: "What's your name?"
-    email: 'enter your e-mail'
-    textarea: 'What is your question?'
+    first_name: "Your name"
+    email: 'Your e-mail'
+    textarea: 'What is your problem?'
   notice:
     success: "We read you offer with pleasure."
-    failure: "Something failed. We sorry, can you request offer again?"
+    failure: "Something failed. Please, request your offer again"
   date:
     abbr_day_names:
     - Sun

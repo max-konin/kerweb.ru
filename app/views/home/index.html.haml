@@ -77,12 +77,9 @@
         .five.columns.info
             %h4
                 =t 'contacts.where_can_find'
-            %br/
-            =t 'contacts.address.html'
+                =t 'contacts.address.html'
             %h4
                 =t 'contacts.contact_us'
-            %br/
-
             %p
                 Телефон: +7-383-213-46-79
             %p
@@ -91,7 +88,7 @@
                     hello[at]kerweb.ru
             %p
                 skype:
-                %a{:href => "skype:maxmaxmax697?chat"} maxmaxmax697
+                %a{:href => "skype:shabalinsky?chat"} shabalinsky
 
 / END CONTACT SECTION ###############################################
 / TWITTER MODULE ###############################################
@@ -120,7 +117,11 @@
 %footer
     .row
         .twelve.columns
-            %img{:alt => "YOURLOGO", :src => "/assets/logo_small.png"}/
+            %p
+                = "© Copyright #{DateTime.now.year} Kernel Web studio. All rights reserved."
+                
+                
+/            %img{:alt => "YOURLOGO", :src => "/assets/logo_small.png"}/
 / END FOOTER ###############################################
 - if !notice.blank?
     %div.modal
