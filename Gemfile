@@ -13,6 +13,8 @@ gem 'mercury-rails'
 gem 'haml-rails'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
+gem 'activeadmin-sortable'
+gem 'acts_as_list', '>= 0.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -57,7 +59,7 @@ gem 'execjs'
 
 # Internationalization
 gem 'i18n'
-gem 'paperclip'
+gem 'paperclip', '~> 3.5'
 
 #local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.local')
 #if File.exists?(local_gemfile)

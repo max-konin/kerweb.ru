@@ -4,7 +4,7 @@ development:
   encoding: utf8
   database: kerweb
   username: root
-  password: 3dnstuff0
+  password:
   host: localhost
   port: 3306
 
@@ -16,7 +16,7 @@ test:
   encoding: utf8
   database: kerweb_test
   username: root
-  password: 3dnstuff0
+  password:
   host: localhost
   port: 3306
 

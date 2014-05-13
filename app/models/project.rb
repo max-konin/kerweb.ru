@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
-  attr_accessible :body, :href, :name, :picture, :picture_mini
+  attr_accessible :body, :href, :name, :picture, :picture_mini, :position
+
+  acts_as_list
 
   has_attached_file :picture,
 	  :styles => { :fit => "800x" },
