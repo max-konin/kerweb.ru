@@ -7,9 +7,8 @@ $ ->
 
   compute_fons_width = ->
     fon_width = (about_us.width() - about_us.find('.row').width())*0.5
-    if fon_width > 0
-      fons.each ->
-        $(this).width fon_width
+    fons.each ->
+      $(this).width fon_width
 
   compute_fons_width()
 
