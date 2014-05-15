@@ -115,10 +115,45 @@
         %p= @notice
 / MAP ########################################################
 %section#map{style: 'height: 600px'}
-    %a{:id=> "firmsonmap_biglink", :href=>"http://maps.2gis.ru/#/?history=project/novosibirsk/center/83.110517887677,54.857621924391/zoom/18/state/widget/id/141266769615561/firms/141266769615561"} Перейти к большой карте
-    %script{:charset=>"utf-8", :type=>"text/javascript", :src=>"http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"}
+    -#%a{:id=> "firmsonmap_biglink", :href=>"http://maps.2gis.ru/#/?history=project/novosibirsk/center/83.110517887677,54.857621924391/zoom/18/state/widget/id/141266769615561/firms/141266769615561"} Перейти к большой карте
+    %div{id: "myMapId", style: "width:100%; height:620px"}
+    -#%script{:charset=>"utf-8", :type=>"text/javascript", :src=>"http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"}
     :javascript
-        new DGWidgetLoader({"borderColor":"#a3a3a3","width":"100%","height":"600","wid":"283e085a9fc3da107605cd457815ac06","pos":{"lon":"83.110517887677","lat":"54.857621924391","zoom":"18"},"opt":{"ref":"hidden","card":["name","contacts","schedule","payings","flamp"],"city":"novosibirsk"},"org":[{"id":"141266769615561"}]});</script>
+        DG.autoload(function() {
+                // Создаем объект карты, связанный с контейнером:
+                var myMap = new DG.Map('myMapId');
+                myMap.disableScrollZoom();
+                // Устанавливаем центр карты и коэффициент масштабирования:
+                myMap.setCenter(new DG.GeoPoint(83.110517887677,54.857621924391),16);
+                // Добавляем элемент управления коэффициентом масштабирования:
+                myMap.controls.add(new DG.Controls.Zoom());
+                var myBalloon = new DG.Balloons.Common({
+                    // Местоположение на которое указывает балун:
+                    geoPoint: new DG.GeoPoint(83.110417887679,54.858021924395),
+                    // Устанавливаем текст, который будет отображатся при открытии балуна:
+                    contentHtml: 'Центр информационных технологий новосибирского Академпарка<br>Николаева 11, оффис 407<br> Kernel Web Studio'
+                });
+                // Создаем маркер:
+                var myMarker = new DG.Markers.Common({
+                    // Местоположение на которое указывает маркер:
+                    geoPoint: new DG.GeoPoint(83.110417887679,54.858021924395),
+                    // Функция, вызываемая при клике по маркеру
+                    clickCallback: function() {
+                        if (! myMap.balloons.getDefaultGroup().contains(myBalloon)) {
+                            // Если балун еще не был добавлен на карту, добавляем его:
+                            myMap.balloons.add(myBalloon);
+                        } else {
+                            // Показываем уже ранее добавленный на карту балун
+                            myBalloon.show();
+                        }
+                    }
+                });
+                 myMap.balloons.add(myBalloon);
+                 myBalloon.show();
+                // Добавить маркер на карту:
+                myMap.markers.add(myMarker);
+            });
+        //new DGWidgetLoader({"borderColor":"#a3a3a3","width":"100%","height":"600","wid":"283e085a9fc3da107605cd457815ac06","pos":{"lon":"83.110517887677","lat":"54.857621924391","zoom":"16"},"opt":{"ref":"hidden","card":["name","contacts","schedule","payings","flamp"],"city":"novosibirsk"},"org":[{"id":"141266769615561"}]});
     %noscript {:style=>"color:#c00;font-size:16px;font-weight:bold;"} Виджет карты использует JavaScript. Включите его в настройках вашего браузера
 
 
