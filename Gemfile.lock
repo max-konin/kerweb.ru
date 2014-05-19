@@ -124,7 +124,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.9.0)
+    net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     orm_adapter (0.5.0)
@@ -217,6 +217,7 @@ DEPENDENCIES
   mercury-rails
   meta_search (>= 1.1.0.pre)
   mysql2 (= 0.3.11)
+  net-ssh (~> 2.7.0)
   paperclip (~> 3.5)
   rails (< 4.0.0)
   rvm-capistrano

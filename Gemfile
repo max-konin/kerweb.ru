@@ -34,6 +34,7 @@ group :assets do
 end
 
 group :development do
+  gem 'net-ssh', '~> 2.7.0'
   gem 'capistrano'
   gem 'rvm-capistrano'
 end
