@@ -1,5 +1,6 @@
 ActiveAdmin.register Offer do
   index do
+    selectable_column
     column :name do |offer|
       link_to offer.name, admin_offer_path(offer)
     end
