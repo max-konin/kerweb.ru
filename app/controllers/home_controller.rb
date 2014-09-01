@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 	def index
 		I18n.locale = params[:locale]
 		@notice = params[:notice]
-		@title = 'Kernel Web Studio'
+		@title = 'Студия разработки Kernel Web'
 		@projects = Project.order("position ASC").all
 	end
 
