@@ -176,6 +176,14 @@
                     %a{:href => "https://twitter.com/kernelweb", :target => "_blank"}
                         %i.icon
                             L
+                %li
+                    %a{:href => "https://facebook.com/kernelweb", :target => "_blank"}
+                        %i.icon
+                            F
+                %li
+                    %a{:href => "https://vk.com/kernelweb", :target => "_blank"}
+                        %i.icon.vk
+                            B
 
 / END SOCIAL MODULE ###############################################
 - if @notice
@@ -230,7 +238,7 @@
     .row
         .twelve.columns
             %p
-                = "© Copyright #{DateTime.now.year} студия разработки Kernel Web. All rights reserved."
+                = "©#{DateTime.now.year} студия разработки Kernel Web. All rights reserved."
                 
                 
 /            %img{:alt => "YOURLOGO", :src => "/assets/logo_small.png"}/

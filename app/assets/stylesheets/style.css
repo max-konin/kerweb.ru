@@ -167,8 +167,15 @@ nav select {
 	
 footer {
     position: relative;
-	padding:20px 0;
-	background-color:#333;}
+	padding:10px 0;
+	background-color:#333;
+}
+
+footer .row{
+    padding-top: 15px;
+}
+
+
 
 section{
     position: relative;}
@@ -735,9 +742,22 @@ section{
 	-ms-transition:all .5s ease-in-out;
 	-o-transition:all .5s ease-in-out;
 	transition:all .5s ease-in-out;}
+
+.icon.vk{
+    font-family:"Arial";
+    font-weight:800;
+    font-style:normal;
+    font-size:24px;
+    color:#777;
+    text-decoration: none;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -ms-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;}
 	
 .icon:hover{
-	color:#00aed7;}
+	color:#d1191d;}
 
 #logo_table{
   display: none
