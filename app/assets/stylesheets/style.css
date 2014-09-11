@@ -77,10 +77,30 @@ h2 {
 
 
 nav #logo {
-	float:left;
-	color:#212121;
-	margin-left:10px;
-	padding: 5px 15px ;}
+     float:left;
+     color:#212121;
+     margin-left:10px;
+     padding: 5px 15px ;
+ }
+
+nav #logo table td #text_head {
+    color:black;
+    font-size: 12px
+}
+
+nav #logo table td {
+    max-height: 50px;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: right;
+    padding-right: 10px;
+    color: #898989
+}
+
+nav #logo table td img {
+    height: 50px;
+}
+
 	
 nav {
 	z-index: 42;
@@ -215,8 +235,8 @@ section{
     position: relative;
     display: inline-block;
     height: 100%;
-    width: 230px;
-    background: url('/assets/logo_img_bg.png') no-repeat;
+    width: 222px;
+    /*background: url('/assets/logo_img_bg.png') no-repeat;*/
     /*background-image: url('/assets/logo_img.png');*/
 }
 

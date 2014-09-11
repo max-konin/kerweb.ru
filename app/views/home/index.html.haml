@@ -32,7 +32,13 @@
     %nav{:style => "top: 0px;"}
         #logo
             %a{:href => "#home"}
-                %img{:alt => "Kerweb", :src => "/assets/logo_small.png"}
+                %table
+                    %td
+                        #text_head
+                            Kernel<br>Web
+                        студия<br>разработки
+                    %td
+                        %img{:alt => "Kerweb", :src => "/assets/logo_img.png"}
         %ul
             %li
                 %a{:href => "#about_us"}
