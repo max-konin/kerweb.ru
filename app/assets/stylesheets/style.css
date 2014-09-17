@@ -77,10 +77,30 @@ h2 {
 
 
 nav #logo {
-	float:left;
-	color:#212121;
-	margin-left:10px;
-	padding: 5px 15px ;}
+     float:left;
+     color:#212121;
+     margin-left:10px;
+     padding: 5px 15px ;
+ }
+
+nav #logo table td #text_head {
+    color:black;
+    font-size: 12px
+}
+
+nav #logo table td {
+    max-height: 50px;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: right;
+    padding-right: 10px;
+    color: #898989
+}
+
+nav #logo table td img {
+    height: 50px;
+}
+
 	
 nav {
 	z-index: 42;
@@ -167,8 +187,15 @@ nav select {
 	
 footer {
     position: relative;
-	padding:20px 0;
-	background-color:#333;}
+	padding:10px 0;
+	background-color:#333;
+}
+
+footer .row{
+    padding-top: 15px;
+}
+
+
 
 section{
     position: relative;}
@@ -208,8 +235,8 @@ section{
     position: relative;
     display: inline-block;
     height: 100%;
-    width: 230px;
-    background: url('/assets/logo_img_bg.png') no-repeat;
+    width: 222px;
+    /*background: url('/assets/logo_img_bg.png') no-repeat;*/
     /*background-image: url('/assets/logo_img.png');*/
 }
 
@@ -735,9 +762,22 @@ section{
 	-ms-transition:all .5s ease-in-out;
 	-o-transition:all .5s ease-in-out;
 	transition:all .5s ease-in-out;}
+
+.icon.vk{
+    font-family:"Arial";
+    font-weight:800;
+    font-style:normal;
+    font-size:24px;
+    color:#777;
+    text-decoration: none;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -ms-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;}
 	
 .icon:hover{
-	color:#00aed7;}
+	color:#d1191d;}
 
 #logo_table{
   display: none

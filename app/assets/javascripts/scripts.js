@@ -85,7 +85,7 @@ $(function() {
 			if (direction == 'down') {
 			
 				nav_container.css({ 'height':nav.outerHeight() });		
-				nav.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
+				nav.stop().addClass("sticky");
 				
 			} else {
 			
