@@ -5,7 +5,9 @@
 
 %body
   = yield
-
+%script{src: "//converzilla.kerweb.ru/assets/public.js", type:"text/javascript"}
+:coffee
+  new Converzilla('542e36c470726f360f000000', {exitForm: false, visitors: true})
 -#Yandex Метрика
 :javascript
   (function (d, w, c) {
