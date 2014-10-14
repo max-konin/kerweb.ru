@@ -5,6 +5,10 @@ class HomeController < ApplicationController
 		@title = 'Студия разработки Kernel Web'
 		@projects = Project.order("position ASC").all
 	end
+	
+	def landing
+		render layout: 'landing'
+	end
 
 	def formPost
 		@offer = Offer.new params[:offer]
